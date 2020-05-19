@@ -3,6 +3,7 @@ version: '3.7'
 services:
   api:
     container_name: api
+    image: api:latest
     build:
       context: backend/
       dockerfile: Dockerfile
@@ -10,6 +11,7 @@ services:
       - 8087:8080
   app:
     container_name: app
+    image: app:latest
     build:
       context: frontend/
       dockerfile: Dockerfile

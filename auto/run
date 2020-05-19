@@ -8,8 +8,7 @@ echo "Generating Executable JAR"
 
 mvn clean package -Dmaven.test.skip=true
 
-
 cd ..
 
 echo "Building Docker image"
-docker-compose build
+docker-compose up --build

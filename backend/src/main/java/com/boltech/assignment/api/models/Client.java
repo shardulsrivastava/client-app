@@ -7,9 +7,9 @@ package com.boltech.assignment.api.models;
  * @author shardulsrivastava
  *
  */
-public class Contacts {
+public class Client {
 
-	public Contacts(long id, String name, String username, String email, String phone, String website, String company) {
+	public Client(long id, String name, String username, String email, String phone, String website, String company) {
 		super();
 		this.id = id;
 		this.name = name;
