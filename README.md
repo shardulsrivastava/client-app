@@ -5,7 +5,7 @@ This is a React based frontend and spring boot based backend.
 
 ## Build the application
 
-To run application locally :
+To build application locally :
 
 ```
 ./auto/build
