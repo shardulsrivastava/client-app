@@ -28,7 +28,11 @@ To persist data on the host after container is removed,docker has 3 options :
 To mount current working directory to the container :
 
 ```bash
-docker run --rm -v "$(pwd)"/data:/app busybox ls -lrtha /app 
+docker run \
+       --rm \
+       -v "$(pwd)"/data:/app \
+       busybox \
+       ls -lrtha /app 
 ```
 
 
@@ -40,7 +44,13 @@ This is useful to temporarily store sensitive files that you don’t want to per
 
 To create and mount a `tmpfs` volume:
 ```bash
-docker run --rm -v --tmpfs /app busybox /bin/sh -c "echo MySecretToken > /app/token.txt && cat /app/token.txt"
+docker run \
+       --rm \
+       -v \
+       --tmpfs /app \
+       busybox \
+       /bin/sh -c \
+       "echo MySecretToken > /app/token.txt && cat /app/token.txt"
 ```
 
 
