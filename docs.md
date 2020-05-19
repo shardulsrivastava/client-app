@@ -17,7 +17,7 @@ To persist data on the host after container is removed,docker has 3 options :
 
 2. Mount a Volume: `docker run --rm -v data:/app busybox ls -lrtha /app`
 
-3. Delete a Volume: `docker volume rm myvol`
+3. Delete a Volume: `docker volume rm data`
 
 
 ### Bind mounts
@@ -60,9 +60,9 @@ Cloud infrastructure is also prone to disasters such as Google Cloud's multi reg
 ### Jfrog Artifactory
 
 
-JFrog Artifactory is one of the most famous artifactory which comes with on-premise and cloud based solutions. It also provides CI/CD solution.
+JFrog Artifactory is one of the most famous artifactory which comes with on-premise and cloud based installation. It also provides CI/CD solution.
 
-It caters as a remote repository for artifacts. Maven artifacts can take sometime while downloading from the maven repository and is dependent on the network bandwidth.
+It acts as a remote repository for artifacts. Maven artifacts can take sometime while downloading from the maven repository and is dependent on the network bandwidth.
 
 JFrog provides faster access to these artifacts by caching them locally every time a jar is requested and serving them from cache next time. 
 
@@ -83,13 +83,19 @@ It comes with a powerful CLI tool `jx`.
 ### Circle CI
 
 Circle CI is a cloud based CI tool which allows you to automates  builds, tests, and deployments.
+
 It is free for public repositories on Github and Bitbucket for the first 100,000 minutes of build per week. 
+
 It supports yaml based pipeline configuration and support all the os including MacOS which is specially helpful for building iOS mobile applications.
-we can SSH into any job to debug your build issues, set up parallelism in .circleci/config.yml file to run jobs faster.
+
+we can SSH into any job to debug build issues, set up parallelism in .circleci/config.yml file to run jobs faster.
 
 
 ### Kops
 Kops is a tool for managing production-grade Kubernetes clusters. It's `kubectl` for clusters.
+
 It supports deployment of kubernetes clusters to existing VPC or create a new VPC from scratch.
+
 It can perform rolling cluster updates and supports heterogeneous clusters by creating multiple instance groups.
+
 It also supports single or multiple master clusters.
